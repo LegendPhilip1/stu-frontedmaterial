@@ -4,10 +4,8 @@ import CandleStick from "./components/CandleStick.vue";
 import TypeIt from "@/components/ReTypeit";
 import { ref, computed, defineComponent, onMounted } from "vue";
 import { getPolymerStaticData } from "@/api/polymerTable";
-import EchartsDemo1 from './components/EchartsDemo1.vue';
-import EchartsDemo2 from './components/EchartsDemo2.vue';
-import { addSearchPerformance } from "@/api/polymerTable";
-import { deleteSearchPerformance } from "@/api/polymerTable";
+/*import { addSearchPerformance } from "@/api/polymerTable";
+import { deleteSearchPerformance } from "@/api/polymerTable";*/
 
 defineOptions({
   name: "Welcome"
@@ -15,8 +13,7 @@ defineOptions({
 defineComponent({
   Bar,
   CandleStick,
-  EchartsDemo1,
-  EchartsDemo2
+
 });
 const loading = ref<boolean>(true);
 const titleClass = computed(() => {
@@ -24,7 +21,7 @@ const titleClass = computed(() => {
 });
 
 
-import ActionDialog from "./actionDialog.vue";
+/*import ActionDialog from "./actionDialog.vue";
 const zIndex = ref(1000);
 const dialogVisible = ref(false);
 const searchPerformance = ref({
@@ -55,7 +52,7 @@ const confirmSelection = async () => {
     console.error('添加性能失败', error);
 
   }
-};
+};*/
 /*
 const confirmDelete = async () => {
   try {
@@ -142,12 +139,12 @@ onMounted(() => {
         </el-card>
       </el-col>
     </el-row>
-    <el-row :span="12">
+    <!--<el-row :span="12">
         <el-button @click="showModal" type="primary">材料性能选择</el-button>
 
-    </el-row>
-  </div>
-  <div class="bottom-box">
+    </el-row>-->
+  <!--</div>
+  <div class="bottom-box">-->
     <el-row :gutter="24" class="el-bottom-row">
       <el-col :span="12">
         <el-card shadow="never" class="el-bottom-card">
@@ -172,19 +169,19 @@ onMounted(() => {
         </el-card>
       </el-col>
     </el-row>
-     <el-dialog v-model="dialogVisible" title="选择材料性能" :style="{ 'z-index': zIndex }">
+     <!--<el-dialog v-model="dialogVisible" title="选择材料性能" :style="{ 'z-index': zIndex }">
       <el-form :model="searchPerformance" label-width="80px">
         <el-form-item label="列名">
                 <el-input v-model="searchPerformance.name" placeholder="请输入搜索内容"></el-input>
         </el-form-item>
-      </el-form>
+      </el-form>-->
       <!-- 其他模态框内容 -->
-      <div slot="footer" class="dialog-footer">
+      <!--<div slot="footer" class="dialog-footer">
         <el-button @click="confirmSelection" type="primary">添加</el-button>
         <el-button @click="confirmDelete" type="primary">删除</el-button>
         <el-button @click="dialogVisible = false">取消</el-button>
       </div>
-    </el-dialog>
+    </el-dialog>-->
   </div>
 </template>
 
